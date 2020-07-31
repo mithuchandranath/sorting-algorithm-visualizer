@@ -1,0 +1,35 @@
+.AppSlideDrawer {
+  box-sizing: border-box;
+  position: fixed;
+  transition: 0.5s;
+  left: 0;
+  top: 56px;
+  width: 0%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.8);
+  z-index: 200;
+  overflow-x: hidden;
+
+}
+
+.AppSlideDrawer--open { 
+  width: 100%;
+  border-top: 1px solid black;
+}
+
+.AppSlideDrawer--closed {
+  width: 0%;
+}
+/* .AppSlideDrawer--closed .AppSlideDrawer__controller-items {
+  display: none;
+}
+.AppSlideDrawer--open .AppSlideDrawer__controller-items {
+  display: block;
+} */
+.AppSlideDrawer__controller-items {
+  padding: 1rem var(--App-x-padding);
+  position: relative;
+}
+.AppSlideDrawer ul.App__controler {
+  justify-content: space-between;
+}

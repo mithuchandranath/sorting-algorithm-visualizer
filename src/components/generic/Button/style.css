@@ -1,0 +1,20 @@
+.Button.bolder{
+    font-weight: 600;
+}
+.Button--icon {
+    color: white;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 32px;
+    vertical-align: bottom;
+    display: inline-flex;
+}
+.VisualizerController__Button:disabled {
+    color: whitesmoke;
+    opacity: .5;
+}
+
+.VisualizerController__Button {
+    color: white;
+}

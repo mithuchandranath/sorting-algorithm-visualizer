@@ -1,0 +1,18 @@
+:root {
+  --App-x-padding: .5rem
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --App-x-padding: 1rem
+  }
+}
+
+.App__body {
+  margin-top: 56px;
+}
+

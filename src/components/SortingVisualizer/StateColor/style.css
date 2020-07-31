@@ -1,0 +1,42 @@
+.StateColor {
+    display: flex;
+    background-color: #222222;
+    flex-flow: wrap;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid #FF6D3B;
+}
+.StateColor__item {
+    display: inline-flex;
+    align-items: center;
+    margin-left: .5rem;
+    padding-top: .5rem;
+}
+.StateColor__item__color {
+    height: 1rem;
+    width: 1rem;
+    margin-right: .5rem;
+}
+
+.StateColor__item__color--unsorted {
+    background-color: #F5F5F5;
+}
+
+.StateColor__item__color--sorted {
+    background-color: #28A745;
+}
+
+.StateColor__item__color--comparing {
+    background-color: #FFC107;
+}
+
+.StateColor__item__color--swapping {
+    background-color: #17A2B8;
+}
+
+
+span.StateColor__item__name {
+    line-height: 1rem;
+    color: white;
+    font-weight: 500;
+
+}

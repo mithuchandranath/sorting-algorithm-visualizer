@@ -1,0 +1,21 @@
+.Bar {
+  /* background-color: gray; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color:whitesmoke;
+  /* border: .1px ridge rgb(153, 102, 255); */
+}
+.Bar:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.Bart_sorted {
+  background-color: #28A745;
+}
+.Bart_stateA {
+  background-color: #FFC107;
+}
+.Bart_stateB {
+  background-color: #17A2B8;
+}

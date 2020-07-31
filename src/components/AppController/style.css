@@ -1,0 +1,11 @@
+.App__controler {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-weight: 500;
+}
+
+.App__controler li:hover {
+  cursor: pointer;
+}

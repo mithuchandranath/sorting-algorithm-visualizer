@@ -1,0 +1,8 @@
+.BarChart {
+  height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  transition: .5s ease-in-out;
+  box-sizing: border-box;
+  border-bottom: 4px solid #BCB8B1;
+}
