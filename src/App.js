@@ -54,7 +54,6 @@ function App() {
   const [controllers, dispatchControllers] = useReducer(controllersReducer, controllersIntialState, controllersInit);
   const [sideDrawerOpen, setSidedrawerOpen] = useState(false);
   const controllersCom = <AppController value={controllers} dispatch={dispatchControllers} />;
-  console.log('parent')
 
   return (
     <div className="App">

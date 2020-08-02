@@ -8,8 +8,14 @@ class Trace {
       arr,
       sortedIdx: [],
       stateA: [],
-      stateB: []
+      stateB: [],
+      stateC: [],
+      stateD: []
     })
+  }
+
+  setArr(arr) {
+    this.arr = [...arr];
   }
 
   getStepsLen() {
@@ -24,14 +30,18 @@ class Trace {
     return this.steps[id];
   }
 
-  addStep(sortedIdx = [], stateA = [], stateB = []) {
+  addStep(sortedIdx = [], stateA = [], stateB = [], stateC = [], stateD = []) {
+
 
     this.steps.push({
       arr: [...this.arr],
       sortedIdx,
       stateA,
-      stateB
-    })
+      stateB,
+      stateC,
+      stateD
+    });
+
   }
 
   swap(i, j) {

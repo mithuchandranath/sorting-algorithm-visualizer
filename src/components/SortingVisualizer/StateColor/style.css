@@ -33,6 +33,14 @@
     background-color: #17A2B8;
 }
 
+.StateColor__item__color--group {
+    background-color: #007BFF;
+}
+
+.StateColor__item__color--group-sorted {
+    background-color: #DC3545;
+}
+
 
 span.StateColor__item__name {
     line-height: 1rem;

@@ -5,6 +5,8 @@ const Bar = ({
     val,
     stateA,
     stateB,
+    stateC,
+    stateD,
     sorted,
     style
 
@@ -14,6 +16,8 @@ const Bar = ({
     let classNames = 'Bar';
     if (stateA) classNames += ' Bart_stateA'
     if (stateB) classNames += ' Bart_stateB'
+    if (stateC) classNames += ' Bart_stateC'
+    if (stateD) classNames += ' Bart_stateD'
     if (sorted) classNames += ' Bart_sorted'
 
     return (

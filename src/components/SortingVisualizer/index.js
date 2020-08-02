@@ -4,10 +4,12 @@ import BarChart from './BarChart';
 import VisualizerControllers from './VisualizerControllers';
 import Trace from '../../algorithms/helpers/Trace';
 import BubbleSort from '../../algorithms/BubbleSort';
+import MergeSort from '../../algorithms/MergeSort';
 import StateColor from './StateColor';
 
 const ALGORITHM = {
   'BubbleSort': BubbleSort,
+  'MergeSort': MergeSort
 };
 
 const visualizerStateInit = (playload) => {
@@ -15,6 +17,7 @@ const visualizerStateInit = (playload) => {
   if (playload.algorithm) {
     const sort = ALGORITHM[playload.algorithm];
     if (sort) trace = sort(trace);
+    // console.log(trace);
   }
 
   const visualizerInitState = {
@@ -29,7 +32,6 @@ const visualizerStateInit = (playload) => {
 }
 
 const visualizerReducer = (state, action) => {
-  //console.log(state.trace.getStepByIdx(state.step + 1));
 
   switch (action.type) {
     case "play":
@@ -37,15 +39,7 @@ const visualizerReducer = (state, action) => {
     case "backward":
       const step = state.step + action.value;
       return { ...state, step: step, currentStep: state.trace.getStepByIdx(step) }
-    //if (state.trace.getTotalSteps() === 0) {
-    /*         //const tmpTrace = JSON.parse(JSON.stringify(state)).trace;
-            var cloneTrace = Object.assign(Object.create(state.trace), state.trace);
-            const trace = ALGORITHM[state.algorithm](cloneTrace);
-            console.log(trace); */
-    // }
-    //return state;
-    /*     case "backward":
-          return {...state,step: state.step - 1,currentStep: state.trace.getStepByIdx(state.step - 1)} */
+
     case "repeat":
       return { ...state, step: action.value, currentStep: state.trace.getStepByIdx(action.value) }
 
@@ -69,10 +63,8 @@ const visualizerReducer = (state, action) => {
 const SortingVisualizer = (props) => {
 
   const [visualizer, dispatchVisualizer] = useReducer(visualizerReducer, props, visualizerStateInit);
-  //console.log('bb', visualizer);
 
   const clearTimeOuts = () => {
-    console.log('aaa',visualizer);
     visualizer.timeoutIds.forEach((timeOutId) => clearTimeout(timeOutId));
     dispatchVisualizer({ type: "updateTimeoutIds", value: [] });
   }
@@ -109,7 +101,6 @@ const SortingVisualizer = (props) => {
 
         let forwardOrBackwardStep = 0;
         let unfinishedStepsLen = stepsLen - visualizer.step;
-        console.log(visualizer.step, unfinishedStepsLen);
 
         //Check whether it's call for forward/backward/repeat/playspeed and then play
         if (('subType' in action)) {
@@ -156,7 +147,6 @@ const SortingVisualizer = (props) => {
         let timeOutId = setTimeout(clearTimeOuts, (unfinishedStepsLen - 1) * timer);
         timeoutIds.push(timeOutId);
         dispatchVisualizer({ type: "updateTimeoutIds", value: timeoutIds });
-        console.log('play');
         break;
 
       case "pause":
@@ -215,7 +205,6 @@ const SortingVisualizer = (props) => {
     }
 
   }
-  console.log('called');
 
   return (
     <div className="SortingVisualizer">
@@ -226,10 +215,10 @@ const SortingVisualizer = (props) => {
         playing={visualizer.timeoutIds.length > 0}
         playSpeed={visualizer.playSpeed}
       />
-      <StateColor/>
+      <StateColor algorithm={props.algorithm} />
     </div>
   )
 
 }
 
-export default  React.memo(SortingVisualizer, (prevProps, nextProps) => prevProps.sortingElements === nextProps.sortingElements && prevProps.algorithm === nextProps.algorithm);
+export default React.memo(SortingVisualizer, (prevProps, nextProps) => prevProps.sortingElements === nextProps.sortingElements && prevProps.algorithm === nextProps.algorithm);
