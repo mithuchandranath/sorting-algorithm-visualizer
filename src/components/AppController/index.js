@@ -9,6 +9,7 @@ const sortingOptions = {
   MergeSort: 'Merge Sort',
   QuickSort: 'Quick Sort',
   SelectionSort: 'Selection Sort',
+  InsertionSort: 'Insertion Sort'
 };
 
 const arrSizeOptions = [5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];

@@ -7,13 +7,15 @@ import BubbleSort from '../../algorithms/BubbleSort';
 import MergeSort from '../../algorithms/MergeSort';
 import QuickSort from '../../algorithms/QuickSort';
 import SelectionSort from '../../algorithms/SelectionSort';
+import InsertionSort from '../../algorithms/InsertionSort';
 import StateColor from './StateColor';
 
 const ALGORITHM = {
   'BubbleSort': BubbleSort,
   'MergeSort': MergeSort,
   'QuickSort': QuickSort,
-  'SelectionSort': SelectionSort
+  'SelectionSort': SelectionSort,
+  'InsertionSort': InsertionSort
 };
 
 const visualizerStateInit = (playload) => {
@@ -21,7 +23,6 @@ const visualizerStateInit = (playload) => {
   if (playload.algorithm) {
     const sort = ALGORITHM[playload.algorithm];
     if (sort) trace = sort(trace);
-    // console.log(trace);
   }
 
   const visualizerInitState = {

@@ -1,5 +1,5 @@
 .SortingVisualizer {
   padding: var(--App-x-padding);
-  background: slategray;
+  background: lightslategrey;
   box-shadow: 0px 0px 2px black;
 }

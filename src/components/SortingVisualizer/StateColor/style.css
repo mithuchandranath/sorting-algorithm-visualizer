@@ -35,13 +35,15 @@
 
 .StateColor__item__color--group,
 .StateColor__item__color--current-item,
-.StateColor__item__color--pivot {
+.StateColor__item__color--pivot,
+.StateColor__item__color--sorted-chunk {
     background-color: #007BFF;
 }
 
 .StateColor__item__color--group-sorted,
 .StateColor__item__color--partition-index,
-.StateColor__item__color--current-minimum {
+.StateColor__item__color--current-minimum,
+.StateColor__item__color--unsorted-chunk {
     background-color: #DC3545;
 }
 

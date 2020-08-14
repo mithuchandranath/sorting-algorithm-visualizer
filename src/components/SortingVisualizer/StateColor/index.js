@@ -13,6 +13,10 @@ const algoStateColorConfig = {
 	SelectionSort: [
 		{ name: "Current Minimum", colorClass: "StateColor__item__color--current-minimum" },
 		{ name: "Current Item", colorClass: "StateColor__item__color--current-item" }
+	],
+	InsertionSort: [
+		{ name: "Sorted Chunk", colorClass: "StateColor__item__color--sorted-chunk" },
+		{ name: "Unsorted Chunk", colorClass: "StateColor__item__color--unsorted-chunk" }
 	]
 }
 
