@@ -33,22 +33,16 @@
     background-color: #17A2B8;
 }
 
-/* Merge sort */
-.StateColor__item__color--group {
+.StateColor__item__color--group,
+.StateColor__item__color--current-item,
+.StateColor__item__color--pivot {
     background-color: #007BFF;
 }
 
-.StateColor__item__color--group-sorted {
+.StateColor__item__color--group-sorted,
+.StateColor__item__color--partition-index,
+.StateColor__item__color--current-minimum {
     background-color: #DC3545;
-}
-
-/* Quick sort */
-.StateColor__item__color--partition-index {
-    background-color: #DC3545;
-}
-
-.StateColor__item__color--pivot {
-    background-color:#007BFF; 
 }
 
 

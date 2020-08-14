@@ -6,12 +6,14 @@ import Trace from '../../algorithms/helpers/Trace';
 import BubbleSort from '../../algorithms/BubbleSort';
 import MergeSort from '../../algorithms/MergeSort';
 import QuickSort from '../../algorithms/QuickSort';
+import SelectionSort from '../../algorithms/SelectionSort';
 import StateColor from './StateColor';
 
 const ALGORITHM = {
   'BubbleSort': BubbleSort,
   'MergeSort': MergeSort,
-  'QuickSort': QuickSort
+  'QuickSort': QuickSort,
+  'SelectionSort': SelectionSort
 };
 
 const visualizerStateInit = (playload) => {

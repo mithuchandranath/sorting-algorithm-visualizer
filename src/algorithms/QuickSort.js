@@ -29,13 +29,14 @@ const QuickSort = (trace) => {
 
 				if (i !== partitionIndex) { // if current comparing index and partition index is same, don't need to swap as because it swaps between itself
 					trace.swap(i, partitionIndex);
-					trace.addStep(trace.getlastSortedidx(), [], [i, partitionIndex], [partitionIndex + 1], [pivotIndex]);
+					trace.addStep(trace.getlastSortedidx(), [], [i, partitionIndex]);
 				}
 				partitionIndex++;
 			}
 		}
 
 		if (pivotIndex !== partitionIndex) { //same case as above
+			trace.addStep(trace.getlastSortedidx(), [], [], [partitionIndex], [pivotIndex]);
 			trace.swap(pivotIndex, partitionIndex);
 			trace.addStep(trace.getlastSortedidx(), [], [pivotIndex, partitionIndex]);
 		}

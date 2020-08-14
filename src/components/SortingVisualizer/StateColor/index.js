@@ -9,6 +9,10 @@ const algoStateColorConfig = {
 	QuickSort: [
 		{ name: "Partiiton Index", colorClass: "StateColor__item__color--partition-index" },
 		{ name: "Pivot", colorClass: "StateColor__item__color--pivot" }
+	],
+	SelectionSort: [
+		{ name: "Current Minimum", colorClass: "StateColor__item__color--current-minimum" },
+		{ name: "Current Item", colorClass: "StateColor__item__color--current-item" }
 	]
 }
 
