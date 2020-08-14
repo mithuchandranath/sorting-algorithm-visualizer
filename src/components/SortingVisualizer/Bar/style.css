@@ -14,10 +14,10 @@
   background-color: #28A745;
 }
 .Bart_stateA {
-  background-color: #FFC107;
+  background-color: #FFC107 !important;
 }
 .Bart_stateB {
-  background-color: #17A2B8;
+  background-color: #17A2B8 !important;
 }
 
 .Bart_stateC {

@@ -6,7 +6,8 @@ import Select from '../generic/Select';
 const sortingOptions = {
   '': 'Select Sort',
   BubbleSort: 'Bubble Sort',
-  MergeSort: 'Merge Sort'
+  MergeSort: 'Merge Sort',
+  QuickSort: 'Quick Sort'
 };
 
 const arrSizeOptions = [5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];

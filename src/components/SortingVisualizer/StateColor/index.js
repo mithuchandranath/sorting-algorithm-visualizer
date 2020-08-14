@@ -5,6 +5,10 @@ const algoStateColorConfig = {
 	MergeSort: [
 		{ name: "Unsorted Group", colorClass: "StateColor__item__color--group" },
 		{ name: "Group Sorted", colorClass: "StateColor__item__color--group-sorted" }
+	],
+	QuickSort: [
+		{ name: "Partiiton Index", colorClass: "StateColor__item__color--partition-index" },
+		{ name: "Pivot", colorClass: "StateColor__item__color--pivot" }
 	]
 }
 

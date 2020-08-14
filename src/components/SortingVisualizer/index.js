@@ -5,11 +5,13 @@ import VisualizerControllers from './VisualizerControllers';
 import Trace from '../../algorithms/helpers/Trace';
 import BubbleSort from '../../algorithms/BubbleSort';
 import MergeSort from '../../algorithms/MergeSort';
+import QuickSort from '../../algorithms/QuickSort';
 import StateColor from './StateColor';
 
 const ALGORITHM = {
   'BubbleSort': BubbleSort,
-  'MergeSort': MergeSort
+  'MergeSort': MergeSort,
+  'QuickSort': QuickSort
 };
 
 const visualizerStateInit = (playload) => {
