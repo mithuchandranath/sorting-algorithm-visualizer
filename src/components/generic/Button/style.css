@@ -9,6 +9,7 @@
     font-size: 32px;
     vertical-align: bottom;
     display: inline-flex;
+    padding: 0px 5px;
 }
 .VisualizerController__Button:disabled {
     color: whitesmoke;
